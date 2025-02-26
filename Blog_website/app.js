@@ -15,6 +15,9 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 
 //port
+//bansalgarish
+//Agl5y4vG40aMEWRx
+
 const PORT = process.env.PORT || 3000;
 //middlewares: passing form data
 app.use(express.urlencoded({ extended: true }));
