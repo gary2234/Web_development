@@ -57,7 +57,11 @@ app.use("/user", userRoutes);
 app.use(errorHandler);
 //start server
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect(process.env.MONGODB_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+  })
   .then(() => {
     console.log("Database connected...");
     app.listen(PORT, () => {
